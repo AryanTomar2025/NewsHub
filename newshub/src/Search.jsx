@@ -12,7 +12,7 @@ export const Search = () => {
   const headingStyle = {
     textAlign: "center",
     fontSize: "2rem",
-    color: "#3498db", 
+    color: "#3498db",
   };
 
   const inputStyle = {
@@ -20,16 +20,18 @@ export const Search = () => {
     fontSize: "1rem",
     borderRadius: "5px",
     border: "1px solid #ccc",
-    width: "300px", 
+    width: "300px",
     outline: "none",
   };
 
   return (
     <>
       <div style={searchBarStyle}>
-        <h1 style={headingStyle}> <span style={{ color: "#FFFFFF" }}>News</span>
-        <span style={{ color: "yellow" }}>Hub</span>
- </h1>
+        <h1 style={headingStyle}>
+          {" "}
+          <span style={{ color: "#FFFFFF" }}>News</span>
+          <span style={{ color: "yellow" }}>Hub</span>
+        </h1>
         <form onSubmit={(e) => e.preventDefault()}>
           <div>
             <input

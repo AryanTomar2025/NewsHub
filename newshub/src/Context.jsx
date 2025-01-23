@@ -26,9 +26,10 @@ const initialState = {
 
 const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
+
   const fetchApiData = async (url) => {
-    dispatch({ type: "SET_LOADING" });
-    try {
+    dispatch({ type: "SET_LOADING" });      
+    try {  
       const response = await fetch(url);
       const data = await response.json();
       dispatch({
@@ -57,7 +58,7 @@ const AppProvider = ({ children }) => {
   };
   useEffect(() => {
     fetchApiData(`${NEWS_API}query=${state.query}&page=${state.page}`);
-  }, [state.query , state.page]);
+  }, [state.query, state.page]);
 
   return (
     <AppContext.Provider
